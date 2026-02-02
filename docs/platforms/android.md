@@ -11,6 +11,7 @@ read_when:
 ## Support snapshot
 - Role: companion node app (Android does not host the Gateway).
 - Gateway required: yes (run it on macOS, Linux, or Windows via WSL2).
+- **Building the app**: [Android Build & Installation Guide](/platforms/android-setup)
 - Install: [Getting Started](/start/getting-started) + [Pairing](/gateway/pairing).
 - Gateway: [Runbook](/gateway) + [Configuration](/gateway/configuration).
   - Protocols: [Gateway protocol](/gateway/protocol) (nodes + control plane).
