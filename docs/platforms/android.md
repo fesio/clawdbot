@@ -8,6 +8,8 @@ read_when:
 
 # Android App (Node)
 
+> **Quick Start:** New to Android setup? See the [Android Quick Start Guide](/platforms/android-quickstart) for step-by-step installation and setup instructions. Polish version available: [Szybki Start - Android](/platforms/android-quickstart-pl).
+
 ## Support snapshot
 - Role: companion node app (Android does not host the Gateway).
 - Gateway required: yes (run it on macOS, Linux, or Windows via WSL2).
