@@ -1061,6 +1061,7 @@
           "platforms/macos-vm",
           "platforms/ios",
           "platforms/android",
+          "platforms/android-setup",
           "platforms/windows",
           "platforms/linux",
           "platforms/fly",
