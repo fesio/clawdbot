@@ -118,8 +118,8 @@ if [ -n "$ANDROID_SDK_ROOT" ] && [ -d "$ANDROID_SDK_ROOT/platforms" ]; then
     PLATFORMS=$(ls -1 "$ANDROID_SDK_ROOT/platforms" 2>/dev/null | grep -E "android-[0-9]+" | sort -V -r)
     if [ -n "$PLATFORMS" ]; then
         LATEST_PLATFORM=$(echo "$PLATFORMS" | head -n 1)
-        PLATFORM_VERSION=$(echo "$LATEST_PLATFORM" | sed 's/android-//')
-        if [ "$PLATFORM_VERSION" -ge 31 ]; then
+        PLATFORM_VERSION=$(echo "$LATEST_PLATFORM" | sed 's/android-//' | cut -d. -f1)
+        if [ "$PLATFORM_VERSION" -ge 31 ] 2>/dev/null; then
             echo -e "${GREEN}✓${NC} Android platform found: $LATEST_PLATFORM (required: android-31+)"
         else
             echo -e "${YELLOW}⚠${NC} Latest platform is $LATEST_PLATFORM, but android-31+ is recommended"
