@@ -290,6 +290,10 @@
       "destination": "/platforms/android"
     },
     {
+      "source": "/android-quickstart",
+      "destination": "/platforms/android-quickstart"
+    },
+    {
       "source": "/architecture",
       "destination": "/concepts/architecture"
     },
@@ -1061,6 +1065,7 @@
           "platforms/macos-vm",
           "platforms/ios",
           "platforms/android",
+          "platforms/android-quickstart",
           "platforms/windows",
           "platforms/linux",
           "platforms/fly",

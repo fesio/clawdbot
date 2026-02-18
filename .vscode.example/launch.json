@@ -1,0 +1,72 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Gateway",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/scripts/run-node.mjs",
+      "args": ["gateway", "--verbose"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug CLI",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/scripts/run-node.mjs",
+      "args": ["${input:cliCommand}"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Agent",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/scripts/run-node.mjs",
+      "args": ["agent", "--message", "${input:agentMessage}", "--thinking", "high"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Tests",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      "args": ["run", "${file}"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Current Test File",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      "args": ["run", "${relativeFile}"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "cliCommand",
+      "type": "promptString",
+      "description": "Enter CLI command (e.g., 'onboard', 'gateway status')",
+      "default": "gateway status"
+    },
+    {
+      "id": "agentMessage",
+      "type": "promptString",
+      "description": "Enter message for agent",
+      "default": "Hello, what can you do?"
+    }
+  ]
+}

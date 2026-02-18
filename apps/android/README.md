@@ -2,6 +2,8 @@
 
 Modern Android node app: connects to the **Gateway WebSocket** (`_clawdbot-gw._tcp`) and exposes **Canvas + Chat + Camera**.
 
+**Quick Start:** See the [Android Quick Start Guide](../../docs/platforms/android-quickstart.md) ([wersja polska](../../docs/platforms/android-quickstart-pl.md)) for step-by-step setup instructions.
+
 Notes:
 - The node keeps the connection alive via a **foreground service** (persistent notification with a Disconnect action).
 - Chat always uses the shared session key **`main`** (same session across iOS/macOS/WebChat/Android).
