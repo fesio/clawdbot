@@ -1,0 +1,30 @@
+{
+  "recommendations": [
+    // TypeScript & JavaScript
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    
+    // Testing
+    "vitest.explorer",
+    
+    // Git
+    "eamodio.gitlens",
+    
+    // Markdown
+    "yzhang.markdown-all-in-one",
+    
+    // Utilities
+    "christian-kohler.path-intellisense",
+    "streetsidesoftware.code-spell-checker",
+    
+    // Docker (if using Docker development)
+    "ms-azuretools.vscode-docker",
+    
+    // Node.js
+    "ms-vscode.vscode-typescript-next",
+    
+    // EditorConfig
+    "editorconfig.editorconfig"
+  ],
+  "unwantedRecommendations": []
+}
